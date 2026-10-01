@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="60.945538mm"
+   height="49.094807mm"
+   viewBox="0 0 60.945536 49.094806"
+   version="1.1"
+   id="svg1"
+   sodipodi:docname="down arrow active.svg"
+   inkscape:version="1.4 (86a8ad7, 2024-10-11)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     inkscape:zoom="0.73642994"
+     inkscape:cx="7.4684634"
+     inkscape:cy="113.38485"
+     inkscape:window-width="1920"
+     inkscape:window-height="991"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg1" />
+  <defs
+     id="defs1" />
+  <g
+     id="layer1"
+     transform="translate(-58.594454,-89.764936)"
+     style="fill:#70a81b;fill-opacity:1">
+    <path
+       id="rect1-8"
+       style="fill:#70a81b;fill-opacity:1;stroke:#d8d8c1;stroke-width:0;stroke-linecap:square;stroke-opacity:1;paint-order:fill markers stroke"
+       d="m 110.22428,94.95131 -19.139917,33.15095 v 10.75748 L 119.53999,89.572827 Z" />
+    <path
+       id="rect1-8-1"
+       style="fill:#70a81b;fill-opacity:1;stroke:#d1d4c5;stroke-width:0;stroke-linecap:square;paint-order:fill markers stroke"
+       d="m 67.910164,95.143416 19.139917,33.150954 v 10.75748 L 58.594454,89.764936 Z" />
+  </g>
+</svg>

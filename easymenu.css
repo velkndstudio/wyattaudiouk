@@ -1,0 +1,212 @@
+/* Resets */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+a {
+    all: unset;
+    cursor: pointer;
+}
+
+
+
+/* Variables */
+
+:root {
+    --topNavHeight: 60px;
+    /* adjust to 100% if want fullscreen */
+    --sideNavWidth: 300px;
+    --globalTransTime: 0.3s;
+    --yTrnsltAmnt: -30px;
+    --navItemMarginL: 40px;
+    /* adjust max height if contents overflows */
+    --subNavMaxHeight: 200px; 
+
+    --subNavMargin: 15px;
+
+    --menuBgColor: black;
+    --subNavBgColor: black;
+    --navBtnBgColor: black;
+
+    --desktopLogoWidth: 500px;
+    --desktopNavPaddding: 5%;
+}
+
+
+
+/* Main */
+
+.main {
+    margin-left: 0;
+    transition: var(--globalTransTime);
+}
+
+.main-push {
+    transform: translateX(var(--sideNavWidth));
+}
+
+/* Mobile menu */
+
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.nav-header {
+    width: 100%;
+    height: var(--topNavHeight);
+    display: grid;
+    grid-template-columns: 25% 50% 25%;
+
+    background-color: var(--menuBgColor);
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#nav-btn-m {
+    width: calc(var(--topNavHeight)*0.8) ;
+    height: calc(var(--topNavHeight)*0.8);
+    margin-top: calc(var(--topNavHeight)*0.1) ;
+    margin-left: calc(var(--topNavHeight)*0.1) ;;
+    transition: var(--globalTransTime);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.nav-btn-m {
+    background-image: url(list.svg);
+}
+.nav-btn-swap {
+    background-image: url(x.svg);
+}
+
+.nav-item-container {
+    height: 100%;
+    position: fixed;
+    top: var(--topNavHeight);
+    left: 0;
+    z-index: 1;
+    width: var(--sideNavWidth);
+    transition: var(--globalTransTime);
+    transform: translateX( calc(var(--sideNavWidth)*-1) );
+    background-color: var(--menuBgColor);
+}
+
+.nav-item, .subnav-header {
+    margin-top: 15px;
+}
+
+.subnav-header{
+    cursor: pointer;
+}
+
+.subnav-item {
+    margin: var(--subNavMargin);
+}
+
+.side-nav-open {
+    transform: translateX(0);
+}
+
+.subnav-menu {
+    max-height: 0;
+    overflow: hidden;
+    transition: var(--globalTransTime);
+    background-color: var(--subNavBgColor);
+}
+
+.subnav-open-m {
+    max-height: var(--subNavMaxHeight);
+}
+
+.subnav-header-img {
+    transition: var(--globalTransTime);
+}
+
+.chevron-180 {
+    transform: rotate(180deg);
+}
+
+/* desktop */
+
+@media screen and (min-width: 992px) {
+    
+
+.navbar {
+    width: 100%;
+    display:flex ;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: nowrap;
+    height: var(--topNavHeight);
+    z-index: 1;
+}
+
+.nav-header {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width: var(--desktopLogoWidth);
+}
+
+
+
+.nav-btn-m {
+    display: none;
+}
+
+.nav-item-container {
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+    position: static;
+  
+    z-index: 1;
+    width: 100%;
+    padding-right: var(--desktopNavPaddding);
+    padding-left: var(--desktopNavPaddding);
+   
+    transition: var(--globalTransTime);
+    
+    transform: translateX(0);
+   
+}
+
+.nav-item, .subnav-header {
+    margin: 0;
+    margin-left: var(--navItemMarginL);
+}
+
+.subnav-menu {
+    visibility: hidden;
+    opacity: 0;
+    text-wrap: nowrap;
+    max-height: var(--subNavMaxHeight);
+
+    transition: var(--globalTransTime);
+    transform: translateY(var(--yTrnsltAmnt));
+    
+    position: absolute;
+    top: var(--topNavHeight);
+}
+
+.subnav-open {
+    visibility: visible;
+    opacity: 1;
+    transform: translate(0);
+}
+
+/* bracket below is end of desktop media query */
+}
